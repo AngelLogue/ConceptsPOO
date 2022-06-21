@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace ConceptsPOO
+﻿namespace ConceptsPOO
 {
     public class Date
     {
@@ -21,7 +15,7 @@ namespace ConceptsPOO
 
         private int CheckDay(int year, int month, int day)
         {
-            if(month == 2 && day == 29 && IsLeapYear(year))
+            if (month == 2 && day == 29 && IsLeapYear(year))
             {
                 return day;
             }
@@ -38,7 +32,7 @@ namespace ConceptsPOO
 
         private bool IsLeapYear(int year)
         {
-            return year % 400 == 0 || year % 4 == 0 && year % 100 != 0 ;
+            return year % 400 == 0 || year % 4 == 0 && year % 100 != 0;
             //if(year % 4 == 0)
             //{
             //    if(year % 100 == 0)
