@@ -1,18 +1,18 @@
 ﻿namespace ConceptsPOO
 {
-    public class SalaryEmployee : Employee
+    internal class BaseCommissionEmployee : CommissionEmployee
     {
-        public decimal Salary { get; set; }
+        public decimal Base { get; set; }
 
         public override decimal GetValueToPay()
         {
-            return Salary;
+            return base.GetValueToPay() + Base;
         }
 
         public override string ToString()
         {
             return $"{base.ToString()}" +
-                $"\n\tValue to pay........:{$"{GetValueToPay():C2}", 18}";
+                $"\n\tBase...............:{$"{Base:C2}",18}";
         }
     }
 }
